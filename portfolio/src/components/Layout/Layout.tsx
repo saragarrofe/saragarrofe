@@ -5,7 +5,7 @@ import Contact from "../Contact/Contact";
 
 export default function Layout() {
 
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const onContactClick = () => {
     setModal(true);
