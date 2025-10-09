@@ -5,14 +5,14 @@ import Contact from "../Contact/Contact";
 
 export default function Layout() {
 
-  const [modal, setModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const onContactClick = () => {
-    setModal(true);
+    setShowModal(true);
   }
 
   const handleClose = () => {
-    setModal(false);
+    setShowModal(false);
   }
 
   return (
@@ -21,7 +21,7 @@ export default function Layout() {
       <main className="p-4" style={{ marginLeft: 240 }}>
         <Outlet />
       </main>
-      <Contact show={modal} handleClose={handleClose} />
+      <Contact show={showModal} handleClose={handleClose} />
     </>
   );
 }
