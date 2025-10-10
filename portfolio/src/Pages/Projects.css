@@ -1,0 +1,31 @@
+.project-card .overlay-content {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.project-card:hover .overlay-content,
+.project-card:focus-within .overlay-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card .img-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%);
+  opacity: 0;
+  transition: opacity .25s ease;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.project-card:hover .img-mask,
+.project-card:focus-within .img-mask {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .project-card .overlay-content,
+  .project-card .img-mask { opacity: 1; transform: none; }
+}
