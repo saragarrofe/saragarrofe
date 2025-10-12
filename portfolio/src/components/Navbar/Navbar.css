@@ -1,5 +1,6 @@
-
-
-.sidebar {
-    width: 240px;
+.sidebar .nav-link.active {
+    transition: all 0.3s ease;
+  font-weight: 600;
+  background: #F2F1F6;
+  border-radius: 1rem;
 }
